@@ -1,0 +1,9 @@
+version: "2"
+services:
+  microservice:
+    build: .
+    image: eoinahern/cloud-native-go:1.1.1-apline
+    environment:
+    - PORT-8080
+    ports:
+      - 8080:8080
