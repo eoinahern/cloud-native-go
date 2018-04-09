@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cloud-native-go
+  labels:
+    app: cloud-native-go
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: cloud-native-go
+        tier: service
+    spec:
+      containers:
+      - name: cloud-native-go
+        image: cloud-native-go:1.1.1
+        ports:
+        - containerPort: 8080
